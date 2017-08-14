@@ -1,0 +1,12 @@
+server:
+  port: 8851
+spring:
+  application:
+    name: cloud-service-security
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8810/eureka
+  instance:
+    appname: service-security
+    prefer-ip-address: true

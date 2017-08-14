@@ -1,0 +1,16 @@
+server:
+  port: 8810
+spring:
+  application:
+    name: cloud-eureka
+eureka:
+  instance:
+    appname: cloud-eureka-server
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+
